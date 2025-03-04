@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family:idroid ;
+    src: url(pacote-projeto-d010/fontes/idroid.otf) format(opentype);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*
+Elemento para ter variaveis em css ":root"
+*/
+:root{
+
+ --cor0: #E7E5C1;
+--cor01: #c5ebd6 ;
+--cor02: #83e1ad;
+--cor03: #3ddc84;
+--cor04: #2fa866;
+--cor05: #063d1e;
+
+--font-padrao: arial, Helvetica, sans-serif ;
+--font-destaque:'Bebas Neue' ;
+--font-android: 'idroid';
+
+}
+/* Configurações Padrão*/
+body{
+    background-color: var(--cor0); 
+    text-indent: 20px;
+    font-family: var(--font-padrao), Helvetica, sans-serif;
+}
+h1{
+    font-family: var(--font-android);
+}
+h2{
+    font-family:var(--font-android),arial,sans-serif ;
+}
+p{
+    font-family: var(--font-padrao);
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 1em;
+    line-height: 2em;
+}
+/* Fim da Configuração Padrão*/
+
+/* Começo do cabeçalho*/
+header{
+        background-image: linear-gradient(#228C4E,#043D1C);
+        max-height: 120px;
+        padding: 10px;
+
+}
+header > h1{
+    font-family: var(--font-destaque);
+    font-weight: normal;
+    font-size: 3em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.669);
+    color: white;
+    text-align: center;
+    
+
+}
+header > .cabecalho {
+    color: white;
+    text-align: center;
+    font-family: var(--font-padrao);
+    font-size: 1.1em;
+    line-height: 1.1em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.669);
+    max-width: 600px;
+    margin: auto;
+    padding-bottom: 15px;
+}
+/* Começo do MENU*/
+nav{
+    background-color: #043D1C;
+    padding: 15px 0px 15px 0px ;
+    box-shadow: 1px 1px 5px black;
+   
+}
+nav > a{
+    color: #2fb16a;
+    text-decoration: none;
+    padding: 4px;
+    margin: 4px;
+    font-weight: bold;
+    transition-duration: .5s;
+}
+nav > a:hover{
+    background: #268c54;
+    color: #043D1C;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 8px;
+}
+/* Fim do MENU*/
+/* Fim do Cabeçalho*/
+
+/*Começo da configuração do conteúdo*/
+main{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.521);
+    min-width: 250px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+}
+/*Começo da configuração do artigo*/
+article{
+    background-color: white;
+}
+strong{
+    color:var(--cor05);
+}
+article > h1{
+    background-color: var(--cor02);
+    color: var(--cor05);
+    font-size: 1.3em;
+    padding: 3px;
+}
+article > h2{
+    background-image: linear-gradient(to right, var(--cor02), transparent);
+    color: var(--cor05);
+    font-size: 1.1em;
+    padding: 3px;
+}
+article > p > a{
+    background-color:var(--cor01);
+    color: var(--cor05);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2px 5px;
+    border-radius: 2px  ;
+    
+}
+article > p > a:hover{
+    text-decoration: underline;
+}
+article > p > a::after{
+    content:' 🔗' ;
+}
+picture > img{
+    width: 100%;
+}
+.imagem{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+div.video{
+    position: relative;
+    background-color: var(--cor05);
+    padding: 15px;
+    margin: 0px -20px 30px -20px;
+    padding-bottom: 59%;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+/*Fim da configuração do artigo*/
+
+/* Começo da configuração do conteúdo periférico */
+aside{
+    background-color: var(--cor01);
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.769);
+}
+aside > h3{
+    background-color: var(--cor02);
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.769);
+}
+aside > p{
+    padding: 10px;
+}
+aside > ul{
+   list-style-position: inside;
+   list-style-type: '\2714\00A0\00A0'; 
+   /* Tbm funciona usando simbolos e " espaços"
+   Ex: list-style-type:'$  ';*/
+   columns: 2;
+}
+
+aside > p > a{
+    background-color: var(--cor01);
+    color: var(--cor05);
+    text-decoration: none;
+    font-weight: bold;
+}
+aside> p > a::after{
+    content: ' 🔗';
+}
+aside > p > a:hover{
+    text-decoration: underline;
+}
+/*Fim da configuração do conteúdo periférico*/
+/*Fim da configuração do conteúdo*/
+
+/*Come~ço da configuração do radapé*/
+footer{
+    background-color: var(--cor05);
+    color: white;     
+    padding: 2px;
+}
+footer p {
+    text-align: center;
+    font-weight: 0.4em; 
+}
+footer > p > a{
+    color: white;
+    font-weight: bold;
+    font-weight: 0.5em;
+    text-align: center;
+    text-decoration: none;  
+    padding: 5px;    
+}
+
+footer > p > a:hover{
+    text-decoration: underline;
+}
+/*Fim da configuração do rodapé*/
